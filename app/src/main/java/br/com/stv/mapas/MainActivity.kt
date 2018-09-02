@@ -17,12 +17,13 @@ class MainActivity : AppCompatActivity() {
 
 
     fun btnMapOnClick(view: View) {
+        // Retirado de: https://www.thiengo.com.br/utilizando-intencoes-para-mapas-de-alta-qualidade-no-android
         Log.d("Map", "Map")
         val endereco = Uri.encode( "Shoppin Dom Pedro, campinas, SP, Brasil")
 
         val navegacao = Uri.parse( "google.navigation:q=$endereco")
 
-        var intent = Intent( Intent.ACTION_VIEW, navegacao )
+        val intent = Intent( Intent.ACTION_VIEW, navegacao )
 
         intent.setPackage( "com.google.android.apps.maps" )
 //
